@@ -1,0 +1,86 @@
+<div *ngIf="report$ | async as report">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>{{ report.name }}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <h2>Generate</h2>
+        <div>
+          <mat-select placeholder="Timespan" [(ngModel)]="timespan" name="timespan" class="form-control">
+            <mat-option *ngFor="let range of ranges" [value]="range.value">
+              {{ range.label }}
+            </mat-option>
+          </mat-select>
+        </div>
+
+        <div *ngIf="timespan != 0">
+          <div>
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker" placeholder="Choose a start date" [(ngModel)]="startDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-select placeholder="Time column" [(ngModel)]="timeColumn" name="timeColumn" class="form-control">
+              <mat-option *ngFor="let column of report.headerColumns" [value]="column">
+                {{ column }}
+              </mat-option>
+            </mat-select>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label>Master group (different folders)</label>
+            <mat-select placeholder="Master group" [(ngModel)]="masterGroup" name="masterGroup" class="form-control">
+              <mat-option>None</mat-option>
+              <mat-option *ngFor="let column of report.headerColumns" [value]="column">
+                {{ column }}
+              </mat-option>
+            </mat-select>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label>Child group (different documents)</label>
+            <mat-checkbox *ngFor="let column of childGroupColumns" [(ngModel)]="column.childGroup" class="form-check">
+              {{column.name}}
+            </mat-checkbox>
+          </div>
+        </div>
+
+        <div>
+          <div *ngIf="!loading; else showSpinner">
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="generate(report)">
+              Generate
+            </button>
+          </div>
+          <ng-template #showSpinner>
+            <mat-spinner></mat-spinner>
+          </ng-template>
+        </div>
+      </div>
+      <div class="col-6">
+        <app-report-detail-sample
+          [report]="report">
+        </app-report-detail-sample>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <app-report-edit
+          [report]="report"
+          (update)="update($event)">
+        </app-report-edit>
+      </div>
+    </div>
+  </div>
+</div>

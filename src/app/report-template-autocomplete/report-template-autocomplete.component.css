@@ -1,0 +1,8 @@
+.mat-spinner {
+  height: 20px;
+  display: inline-block;
+  width: 20px;
+  left: -28px;
+  top: 6px;
+  position: relative;
+}

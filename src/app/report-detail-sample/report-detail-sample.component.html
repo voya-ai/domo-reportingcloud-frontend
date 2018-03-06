@@ -1,0 +1,31 @@
+<h2>Sample</h2>
+
+<div>
+  <div class="form-group">
+    <label>Child group (different documents)</label>
+    <mat-checkbox *ngFor="let column of childGroupColumns" [(ngModel)]="column.childGroup" class="form-check">
+      {{column.name}}
+    </mat-checkbox>
+  </div>
+</div>
+
+<div>
+  <div *ngIf="!loading; else showSpinner">
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="sample(report)">
+      Download sample
+    </button>
+  </div>
+  <ng-template #showSpinner>
+    <mat-spinner></mat-spinner>
+  </ng-template>
+</div>
+
+<div class="form-group" *ngIf="data">
+  <label>Data</label>
+  <textarea class="form-control" rows="5">
+    {{data}}
+  </textarea>
+</div>

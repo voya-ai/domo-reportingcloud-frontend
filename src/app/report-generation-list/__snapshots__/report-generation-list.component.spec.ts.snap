@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReportGenerationListComponent should match the snapshot 1`] = `
+<app-report-generation-list
+  _reportService={[Function MockReportGenerationService]}
+  reports={[Function Array]}
+>
+  <h2>
+    Generated reports
+  </h2>
+  
+  <mat-list
+    class="mat-list"
+    role="list"
+  >
+    
+    
+    
+    
+  
+  </mat-list>
+  
+</app-report-generation-list>
+`;

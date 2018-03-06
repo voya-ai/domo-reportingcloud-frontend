@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReportTemplateAutocompleteComponent should match the snapshot 1`] = `
+<app-report-template-autocomplete
+  _templateService={[Function MockTemplateService]}
+  onSelectionChange={[Function EventEmitter]}
+  templateControl={[Function FormControl]}
+  templateLoading="false"
+>
+  <mat-form-field>
+    
+     
+    <input
+      aria-autocomplete="list"
+      aria-expanded="false"
+      aria-owns="mat-autocomplete-1"
+      autocomplete="off"
+      class="ng-untouched ng-pristine ng-valid"
+      matinput=""
+      ng-reflect-autocomplete="[object Object]"
+      ng-reflect-form="[object Object]"
+      placeholder="Template"
+      role="combobox"
+    />
+    
+  
+  </mat-form-field>
+  
+  
+  
+  <mat-autocomplete
+    class="mat-autocomplete"
+    ng-reflect-display-with="function (template) {
+          "
+  >
+    
+  </mat-autocomplete>
+  
+</app-report-template-autocomplete>
+`;

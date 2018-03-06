@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReportEditComponent should match the snapshot 1`] = `
+<app-report-edit
+  _datasetService={[Function MockDatasetService]}
+  _reportService={[Function MockReportService]}
+  _router={[Function Router]}
+  columnsLoading="false"
+  contentColumns={[Function Array]}
+  headerColumns={[Function Array]}
+  isEditing="false"
+  update={[Function EventEmitter]}
+>
+  <h2>
+    Edit
+  </h2>
+  
+  
+    <button
+    class="btn btn-secondary"
+    type="button"
+  >
+    
+      
+    <i
+      class="material-icons"
+    >
+      
+        edit
+      
+    </i>
+    
+    
+  </button>
+  
+  
+  
+</app-report-edit>
+`;

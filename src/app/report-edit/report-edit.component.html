@@ -1,0 +1,58 @@
+<h2>Edit</h2>
+
+<div *ngIf="isEditing else showEditButton">
+  <div>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Report name" [(ngModel)]="report.name">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <app-report-template-autocomplete
+      (onSelectionChange)="templateSelectionChanged($event)"
+      [templateName]="report.templateName">
+    </app-report-template-autocomplete>
+  </div>
+
+  <div>
+    <app-report-dataset-autocomplete
+      (onSelectionChange)="datasetSelectionChanged($event)"
+      [dataSet]="report.dataSet">
+    </app-report-dataset-autocomplete>
+  </div>
+
+  <div *ngIf="columnsLoading">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div
+    *ngIf="headerColumns.length > 0">
+    <app-dataset-column-select
+      [(columns)]="headerColumns"
+      title="Header columns">
+    </app-dataset-column-select>
+  </div>
+
+  <div
+    *ngIf="contentColumns.length > 0">
+    <app-dataset-column-select
+      [(columns)]="contentColumns"
+      title="Content columns">
+    </app-dataset-column-select>
+  </div>
+
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="save()">Save</button>
+</div>
+<ng-template #showEditButton>
+  <button
+    type="button"
+    class="btn btn-secondary"
+    (click)="edit()">
+    <i class="material-icons">
+      edit
+    </i>
+  </button>
+</ng-template>

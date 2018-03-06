@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReportDatasetAutocompleteComponent should match the snapshot 1`] = `
+<app-report-dataset-autocomplete
+  _datasetService={[Function MockDatasetService]}
+  datasetControl={[Function FormControl]}
+  datasetLoading="false"
+  onSelectionChange={[Function EventEmitter]}
+>
+  <mat-form-field>
+    
+    
+    <input
+      aria-autocomplete="list"
+      aria-expanded="false"
+      aria-owns="mat-autocomplete-1"
+      autocomplete="off"
+      class="ng-untouched ng-pristine ng-valid"
+      matinput=""
+      ng-reflect-autocomplete="[object Object]"
+      ng-reflect-form="[object Object]"
+      placeholder="Dataset"
+      role="combobox"
+      value="undefined"
+    />
+    
+  
+  </mat-form-field>
+  
+  
+  
+  <mat-autocomplete
+    class="mat-autocomplete"
+    ng-reflect-display-with="function (dataset) {
+          r"
+  >
+    
+  </mat-autocomplete>
+  
+</app-report-dataset-autocomplete>
+`;

@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReportAddComponent should match the snapshot 1`] = `
+<app-report-add
+  _datasetService={[Function MockDatasetService]}
+  _reportService={[Function MockReportService]}
+  _router={[Function Router]}
+  columnsLoading="false"
+  contentColumns={[Function Array]}
+  headerColumns={[Function Array]}
+>
+  <h1>
+    Add report
+  </h1>
+  
+  <div>
+    
+    
+    <mat-form-field
+      class="example-full-width mat-input-container mat-form-field ng-tns-c2-0 mat-form-field-type-mat-input mat-form-field-can-float mat-primary ng-untouched ng-pristine ng-valid"
+    >
+      <div
+        class="mat-input-wrapper mat-form-field-wrapper"
+      >
+        <div
+          class="mat-input-flex mat-form-field-flex"
+        >
+          
+          <div
+            class="mat-input-infix mat-form-field-infix"
+          >
+            
+      
+            <input
+              aria-invalid="false"
+              class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-valid"
+              id="mat-input-1"
+              matinput=""
+              ng-reflect-placeholder="Report name"
+              placeholder="Report name"
+            />
+            
+    
+            <span
+              class="mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
+            >
+              
+              <label
+                aria-owns="mat-input-1"
+                class="mat-input-placeholder mat-form-field-placeholder ng-tns-c2-0 mat-empty mat-form-field-empty"
+                for="mat-input-1"
+              >
+                Report name 
+                
+              </label>
+            </span>
+          </div>
+          
+        </div>
+        <div
+          class="mat-input-underline mat-form-field-underline"
+        >
+          <span
+            class="mat-input-ripple mat-form-field-ripple"
+          />
+        </div>
+        <div
+          class="mat-input-subscript-wrapper mat-form-field-subscript-wrapper"
+          ng-reflect-ng-switch="hint"
+        >
+          
+          
+          <div
+            class="mat-input-hint-wrapper mat-form-field-hint-wrapper ng-tns-c2-0 ng-trigger ng-trigger-transitionMessages"
+            style="opacity: 1;"
+          >
+            
+            <div
+              class="mat-input-hint-spacer mat-form-field-hint-spacer"
+            />
+          </div>
+        </div>
+      </div>
+    </mat-form-field>
+    
+  
+  </div>
+  
+  <div>
+    
+    
+    <app-report-template-autocomplete />
+    
+  
+  </div>
+  
+  <div>
+    
+    
+    <app-report-dataset-autocomplete />
+    
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <button
+    class="btn btn-primary"
+    disabled=""
+    type="button"
+  >
+    Save
+  </button>
+  
+</app-report-add>
+`;

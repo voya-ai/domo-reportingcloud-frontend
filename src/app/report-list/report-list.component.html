@@ -1,0 +1,15 @@
+<h2>Report templates</h2>
+
+<mat-list>
+  <mat-list-item
+    *ngFor="let report of reports">
+    <h3 matLine>
+      <a [routerLink]="['/report', report.slug]">
+        {{ report.name }}
+      </a>
+    </h3>
+    <p matLine>
+      <span> {{report.templateName}} </span>
+    </p>
+  </mat-list-item>
+</mat-list>

@@ -1,0 +1,21 @@
+<mat-form-field>
+  <input
+    matInput
+    placeholder="Dataset"
+    [defaultValue]="dataSet"
+    [matAutocomplete]="autoDataset"
+    [formControl]="datasetControl">
+</mat-form-field>
+
+<mat-spinner *ngIf="datasetLoading"></mat-spinner>
+
+<mat-autocomplete
+  #autoDataset="matAutocomplete"
+  [displayWith]="displayDataset">
+  <mat-option
+    *ngFor="let option of filteredDatasetOptions"
+    [value]="option"
+    (onSelectionChange)="selectionChanged(option)">
+     {{ option.name }}
+  </mat-option>
+</mat-autocomplete>

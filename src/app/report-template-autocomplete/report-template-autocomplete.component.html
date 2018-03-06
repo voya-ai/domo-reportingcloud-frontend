@@ -1,0 +1,20 @@
+<mat-form-field>
+   <input
+    matInput
+    placeholder="Template"
+    [matAutocomplete]="autoTemplate"
+    [formControl]="templateControl">
+</mat-form-field>
+
+<mat-spinner *ngIf="templateLoading"></mat-spinner>
+
+<mat-autocomplete
+  #autoTemplate="matAutocomplete"
+  [displayWith]="displayTemplate">
+  <mat-option
+    *ngFor="let option of filteredTemplateOptions"
+    [value]="option"
+    (onSelectionChange)="selectionChanged(option)">
+     {{ option.templateName }}
+  </mat-option>
+</mat-autocomplete>

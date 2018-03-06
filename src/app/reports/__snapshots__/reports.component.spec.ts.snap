@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReportsComponent should match the snapshot 1`] = `
+<app-reports>
+  <app-report-list />
+  <app-report-generation-list />
+  
+</app-reports>
+`;

@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should match the snapshot 1`] = `
+<app-root
+  title={[Function String]}
+>
+  <div
+    class="container-fluid"
+  >
+    
+    
+    <div
+      class="row"
+    >
+      
+      
+      <nav
+        class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar"
+      >
+        
+        
+        <ul
+          class="nav nav-pills flex-column"
+        >
+          
+          
+          <li
+            class="nav-item"
+          >
+            
+            
+            <a
+              class="nav-link"
+              routerlink="/"
+              routerlinkactive="active"
+            >
+              View reports
+            </a>
+            
+          
+          </li>
+          
+          
+          <li
+            class="nav-item"
+          >
+            
+            
+            <a
+              class="nav-link"
+              routerlink="/report/add"
+              routerlinkactive="active"
+            >
+              Add report
+            </a>
+            
+          
+          </li>
+          
+        
+        </ul>
+        
+      
+      </nav>
+      
+    
+    </div>
+    
+  
+  </div>
+  
+  <main
+    class="col-sm-9 ml-sm-auto col-md-10 pt-3"
+    role="main"
+  >
+    
+    
+    <router-outlet />
+    
+  
+  </main>
+  
+</app-root>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReportDetailComponent should match the snapshot 1`] = `
+<app-report-detail
+  _reportService={[Function MockReportService]}
+  _route={[Function ActivatedRouteStub]}
+  _router={[Function RouterStub]}
+  loading="false"
+  ranges={[Function Array]}
+  report$={[Function Observable]}
+  reportEditSubject={[Function Subject]}
+  timespan="0"
+>
+  
+  
+</app-report-detail>
+`;

@@ -1,0 +1,16 @@
+<h2>Generated reports</h2>
+
+<mat-list>
+  <mat-list-item
+    *ngFor="let report of reports">
+    <h3 matLine>
+      <a [href]="report.url" target="_blank">
+        {{ report.name }}
+      </a>
+    </h3>
+    <p matLine>
+      <span> {{report.slug}} </span>
+      <span><em> ({{report.status}}) </em></span>
+    </p>
+  </mat-list-item>
+</mat-list>
